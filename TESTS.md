@@ -1,5 +1,9 @@
 # Testing MCP Alchemy
 
+For an optional Codex tool-use example with a synthetic SQLite fixture and offline
+pytest replay, see [examples/codex](examples/codex/README.md). It runs separately
+from the database tests below and makes no model calls during ordinary replay.
+
 This guide explains how to test MCP Alchemy with multiple databases using Docker and Claude Desktop.
 
 ## Setup Test Databases
