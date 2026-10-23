@@ -46,3 +46,18 @@ and absence of changes outside the generated database.
 - Thread identifier anonymized; nonbehavioral startup stderr omitted. Tool
   arguments, results, usage, file diff and synthetic database bytes are retained.
 - Ordinary replay is offline; re-record to assess a new model or server version.
+
+## Personal-fork compatibility check
+
+This branch is maintained by the pytest-codex author as a personal-fork case
+study. It is not upstream adoption, endorsement, or an independently reported
+user trial. The original recording is unchanged; replay now uses the published
+pytest-codex 0.3.0 package.
+
+The separate `Offline Codex replay` workflow runs on Linux, macOS and Windows
+with Python 3.10 and 3.13. It installs only replay dependencies and explicitly
+selects an unavailable Codex executable. It cannot make a fresh model call.
+A green run verifies the saved observation and restored fixture artifacts; it
+does not start the current MCP server or prove fresh model compatibility.
+Dependency installation needs network access; test execution replays locally.
+There is no scheduled live testing or model spend.
